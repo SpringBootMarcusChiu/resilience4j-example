@@ -11,11 +11,16 @@ import static io.github.resilience4j.circuitbreaker.CircuitBreakerConfig.Sliding
 @Configuration
 public class CircuitBreakerConfig {
 
-//    @Bean
-//    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
-//        return CircuitBreakerConfigCustomizer
-//                .of(RemoteServiceClient.REMOTE_SERVICE_A, builder -> builder.slidingWindowSize(100));
-//    }
+    /**
+     * CircuitBreakerConfigCustomizer can be completely replaced by config properties
+     * see: application.yml
+     * @return
+     */
+    @Bean
+    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
+        return CircuitBreakerConfigCustomizer
+                .of(RemoteServiceClient.REMOTE_SERVICE_A, builder -> builder.slidingWindowSize(100));
+    }
 
 //    @Bean
 //    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
