@@ -1,15 +1,11 @@
 package com.marcuschiu.resilience4jexample.config;
 
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-public class CircuitBreakerConfig {
-
-    /**
-     * CircuitBreakerConfigCustomizer can be completely replaced by config properties
-     * see: application.yml
-     * @return
-     */
+/**
+ * This configuration of beans can be completely replaced by the application.yml
+ * in which SpringBoot would AutoConfigure the beans for you
+ */
+//@Configuration
+//public class CircuitBreakerConfig {
 //    @Bean
 //    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
 //        return CircuitBreakerConfigCustomizer
@@ -30,4 +26,4 @@ public class CircuitBreakerConfig {
 //                    builder.slidingWindowType(COUNT_BASED);
 //                });
 //    }
-}
+//}
