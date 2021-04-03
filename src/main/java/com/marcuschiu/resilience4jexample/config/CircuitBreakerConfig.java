@@ -1,12 +1,6 @@
-package com.marcuschiu.resilience4jexample;
+package com.marcuschiu.resilience4jexample.config;
 
-import io.github.resilience4j.common.circuitbreaker.configuration.CircuitBreakerConfigCustomizer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.time.Duration;
-
-import static io.github.resilience4j.circuitbreaker.CircuitBreakerConfig.SlidingWindowType.COUNT_BASED;
 
 @Configuration
 public class CircuitBreakerConfig {
@@ -16,11 +10,11 @@ public class CircuitBreakerConfig {
      * see: application.yml
      * @return
      */
-    @Bean
-    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
-        return CircuitBreakerConfigCustomizer
-                .of(RemoteServiceClient.REMOTE_SERVICE_A, builder -> builder.slidingWindowSize(100));
-    }
+//    @Bean
+//    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {
+//        return CircuitBreakerConfigCustomizer
+//                .of(RemoteServiceClient.REMOTE_SERVICE_A, builder -> builder.slidingWindowSize(100));
+//    }
 
 //    @Bean
 //    public CircuitBreakerConfigCustomizer someRemoteSvcCircuitBreaker() {

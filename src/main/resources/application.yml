@@ -37,7 +37,8 @@ resilience4j.retry:
 resilience4j.bulkhead:
   instances:
     remoteServiceA:
-      maxConcurrentCalls: 10
+      maxWaitDuration: 0
+      maxConcurrentCalls: 1
     remoteServiceB:
       maxWaitDuration: 10ms
       maxConcurrentCalls: 20
